@@ -3,10 +3,12 @@
  */
 html, body {
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+}
 
 body {
-  background-color: #cccccc; }
+  background-color: #cccccc;
+}
 
 .hand {
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -19,13 +21,17 @@ body {
   width: 344px;
   left: 50%;
   top: 50%;
-  background-image: url("/img/flippers.png"); }
+  background-image: url("/img/flippers.png");
+}
 
 .share {
   overflow: hidden;
   position: fixed;
   bottom: 15px;
-  right: 15px; }
-  .share .twitter-share-button {
-    vertical-align: bottom;
-    margin-right: 8px; }
+  right: 15px;
+}
+
+.twitter-share-button {
+  vertical-align: bottom;
+  margin-right: 8px;
+}
