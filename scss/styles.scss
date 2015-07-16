@@ -1,0 +1,39 @@
+/**
+ * Flip them the bird!
+ */
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: rgb(204, 204, 204);
+}
+
+.hand {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  height: 444px;
+  width: 344px;
+  left: 50%;
+  top: 50%;
+  background-image: url('/img/flippers.png');
+}
+
+.share {
+	overflow: hidden;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+
+	// Damn it twitter, behave!
+	.twitter-share-button {
+		vertical-align: bottom;
+		margin-right: 8px;
+	}
+}
