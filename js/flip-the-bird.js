@@ -90,7 +90,6 @@ function App() {
     function mobileTilt(data){
         if(mobileOrigin === undefined){
             mobileOrigin = data[0];
-            alert(mobileOrigin);
         }
         var percentage = ((mobileOrigin - data[0]) + 8) / 16;
         var color = fadeToColor(color1, color2, percentage)
