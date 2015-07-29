@@ -12,6 +12,7 @@ var theWidth = 8256; // Pixels, fuck!
 var theFrames = 24;
 var thatWidth = theWidth / theFrames
 var totalHeight = window.innerHeight;
+var mobileOrigin;
 
 var hand = document.querySelector( '.hand' );
 
