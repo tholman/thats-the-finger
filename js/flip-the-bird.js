@@ -39,24 +39,24 @@ function App() {
   			hand.style.backgroundPosition = ((-segment * thatWidth) + 'px 0px');
 		}
 
-		window.onresize = function() {
-			totalHeight = window.innerHeight;
-		}
+        // For flip phones
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener("deviceorientation", function () {
+                mobileTilt([event.beta, event.gamma]);
+            }, true);
+        } else if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion', function () {
+                mobileTilt([event.acceleration.x * 2, event.acceleration.y * 2]);
+            }, true);
+        } else {
+            window.addEventListener("MozOrientation", function () {
+                mobileTilt([orientation.x * 50, orientation.y * 50]);
+            }, true);
+        }
 
-                    // For flip phones
-                    if (window.DeviceOrientationEvent) {
-                        window.addEventListener("deviceorientation", function () {
-                            mobileTilt([event.beta, event.gamma]);
-                        }, true);
-                    } else if (window.DeviceMotionEvent) {
-                        window.addEventListener('devicemotion', function () {
-                            mobileTilt([event.acceleration.x * 2, event.acceleration.y * 2]);
-                        }, true);
-                    } else {
-                        window.addEventListener("MozOrientation", function () {
-                            mobileTilt([orientation.x * 50, orientation.y * 50]);
-                        }, true);
-                    }
+        window.onresize = function() {
+            totalHeight = window.innerHeight;
+        }
 
    		// Load Twitter
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

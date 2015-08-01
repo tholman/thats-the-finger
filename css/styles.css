@@ -35,3 +35,13 @@ body {
   vertical-align: bottom;
   margin-right: 8px;
 }
+
+@media (max-width: 600px) {
+  .hand {
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(0.6);
+    -moz-transform: translate3d(-50%, -50%, 0) scale(0.6);
+    -ms-transform: translate3d(-50%, -50%, 0) scale(0.6);
+    -o-transform: translate3d(-50%, -50%, 0) scale(0.6);
+    transform: translate3d(-50%, -50%, 0) scale(0.6);
+  }
+}
