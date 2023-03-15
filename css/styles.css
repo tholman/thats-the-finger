@@ -1,7 +1,8 @@
 /**
  * Flip them the bird!
  */
-html, body {
+html,
+body {
   padding: 0px;
   margin: 0px;
 }
@@ -34,6 +35,23 @@ body {
 .twitter-share-button {
   vertical-align: bottom;
   margin-right: 8px;
+}
+
+.share-link {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
